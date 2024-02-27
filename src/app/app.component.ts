@@ -15,7 +15,7 @@ export class AppComponent {
   private http: HttpClient = inject(HttpClient);
   text: any;
   constructor() {
-    this.http.get<string>('http://localhost:8080/', {responseType: 'text' as 'json'}).subscribe({
+    this.http.get<string>('http://localhost:8085/', {responseType: 'text' as 'json'}).subscribe({
       next: data => {
         this.text = data;
       },
